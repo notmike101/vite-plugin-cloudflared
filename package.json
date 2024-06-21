@@ -10,7 +10,11 @@
   },
   "keywords": ["vite", "vite plugin", "cloudflare", "cloudflared", "tunnel"],
   "author": "Mike Orozco (notmike101) <me@mikeorozco.dev>",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+     "type": "git",
+     "url": "https://github.com/notmike101/vite-plugin-cloudflared/"
+  },
   "devDependencies": {
     "@types/node": "^20.14.7",
     "terser": "^5.31.1",
