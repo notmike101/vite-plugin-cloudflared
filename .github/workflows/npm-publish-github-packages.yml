@@ -32,6 +32,13 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Save build in artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: .
+          retention-days: 1
+
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
@@ -44,6 +51,12 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
+
+      - name: Get build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: .
 
       - name: Publish to npmjs.com
         run: npm publish
