@@ -1,0 +1,35 @@
+{
+  "name": "vite-plugin-cloudflared",
+  "version": "1.0.0",
+  "description": "Implement a cloudflare tunnel as part of your vite dev server",
+  "type": "module",
+  "module": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "terser dist/index.js --compress --output dist/index.js"
+  },
+  "keywords": ["vite", "vite plugin", "cloudflare", "cloudflared", "tunnel"],
+  "author": "Mike Orozco (notmike101) <me@mikeorozco.dev>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.7",
+    "terser": "^5.31.1",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
+  },
+  "dependencies": {
+    "cloudflared": "^0.5.2"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  },
+  "files": ["dist"],
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}
