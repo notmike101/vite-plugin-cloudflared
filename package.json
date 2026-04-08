@@ -19,7 +19,7 @@
     "@types/node": "^20.14.7",
     "terser": "^5.31.1",
     "typescript": "^5.5.2",
-    "vite": "^5.3.1"
+    "vite": "^6.4.2"
   },
   "dependencies": {
     "cloudflared": "^0.5.2"
